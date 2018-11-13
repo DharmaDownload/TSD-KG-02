@@ -356,6 +356,6 @@ if __name__ == '__main__':
     # existing.reset_current()
 
     existing.new_pecha('TSD-KG-02.txt')
-    to_apply = ['yigchung', 'quotes', 'sapche', 'tsawa']
+    to_apply = ['tsawa', 'yigchung', 'quotes', 'sapche']
     existing.write_views(to_apply, 'export')
 
