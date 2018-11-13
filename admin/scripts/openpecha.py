@@ -144,10 +144,10 @@ class OpenPecha:
         :param dir_paths: paths as strings
         :return: content of self.dirs
         """
-        dirs = {'bases': Path(dir_paths['bases']),
-                'layers': Path(dir_paths['layers']),
-                'input': Path(dir_paths['input']),
-                'output': Path(dir_paths['output'])}
+        dirs = {'bases': Path('../../') / dir_paths['bases'],
+                'layers': Path('../../') / dir_paths['layers'],
+                'input': Path('../../') / dir_paths['input'],
+                'output': Path('../../') / dir_paths['output']}
         dirs['bases'].mkdir(exist_ok=True)
         dirs['layers'].mkdir(exist_ok=True)
         dirs['input'].mkdir(exist_ok=True)
@@ -355,5 +355,7 @@ if __name__ == '__main__':
     # existing.write_views(to_apply, 'export')
     # existing.reset_current()
 
-    existing.new_pecha('RDI-TOK-01-1.txt')
+    existing.new_pecha('TSD-KG-02.txt')
+    to_apply = ['yigchung', 'quotes', 'sapche', 'tsawa']
+    existing.write_views(to_apply, 'export')
 
